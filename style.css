@@ -16,9 +16,6 @@ p {
     padding: 0;
 }
 
-/* * {
-    border: 1px solid purple; 
-} */
 
 /* styles */
 /* pale lilac #E3E4EA */
@@ -42,39 +39,50 @@ body {
 }
 
 img {
-    max-width: 100%; 
+    max-width: 100%;
+    height: 100%; 
+    display: block;
 }
 
+
 .wrapper {
-        width: 1280px;
-        max-width: 100%; 
-        margin: 0px auto;
+    width: 1280px;
+    max-width: 100%; 
+    margin: 0px auto;
 }
+
+/* header styles */
 
 header {
     height: 100vh;
-    background-image: url(../assets/image-1@2x.png);
+    background-image: url(./assets/image-1@2x.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative; 
 }
 
+/* grey box in footer containing <h1> with title of "Foot Forward" */
 .foot-forward {
-    height: 30%;
-    width: 27%;
+    height: 37%;
+    width: 36%;
     background-color: #E3E4EA;
     position: absolute;
     top: 290px;
     left: 43%;
+    opacity: 0.8;
 }
 
-
+/* "Foot Forward" in header */
 h1 {
-    font-size: 80px;
+    font-size: 100px;
     font-family: 'Nova Flat', cursive;
     color: #186684;
-    font-weight: 200;
+    padding-left: 10px; 
+}
+
+.hamburger-menu {
+    visibility: hidden;
 }
 
 h2 {
@@ -83,11 +91,16 @@ h2 {
     letter-spacing: 2px; 
 }
 
+h3 {
+    color: #186684;
+}
+
+/* Social media icons on the side of the header */
 aside {
     position: absolute; 
     right: 0;
     bottom: 40%; 
-    padding-right: 20px;
+    padding-right: 50px;
     
 }
 
@@ -98,13 +111,14 @@ aside li {
 
 aside a {
     color: #E85B26;
-    transition: .3s; 
+    transition: .1s; 
     transition-timing-function: ease-in-out;
 }
 
 aside a:hover,
 aside a:focus {
     color: #186684;
+    text-shadow: 2px 2px 5px #104155;
 }
 
 section {
@@ -125,31 +139,33 @@ nav a {
     color: #186684;
     text-decoration: none;
     margin-left: 20px; 
-    transition: .3s; 
+    transition: .2s; 
     transition-timing-function: ease-in-out;
 }
 
 nav a:hover,
 nav a:focus {
     color: #E85B26;
+    text-shadow: 4px 4px 6px #ffb07c;
     letter-spacing: 2.5px;
 }
 
-/* right side first image under hero section */
+/* right side of first section, image directly under hero section */
 .right-side {
     float: right; 
     width: 50%; 
+    height: 100%; 
 }
-
+/* left side of first section, textbox directly under hero section  */
 .text-box1 {
     height: 480px; 
     width: 50%; 
     float: left; 
 }
-
+/* centers text within text-box1 */
 .box1-size {
-    width: 55%;
-    margin-left: 22%;
+    width: 75%;
+    margin-left: 15%;
     margin-top: 15%;
 
 }
@@ -163,41 +179,50 @@ nav a:focus {
 
 button {
     font-family: 'Nova Flat', cursive;
-    color: #186684;
     background-color: white; 
     border: 2px solid #E85B26; 
     padding: 10px; 
 }
 
-.box2-size {
-    width: 55%;
-    /* position: relative;
-    top: 120px;
-    left: 142px; */
-    margin-left: 22%;
-    margin-top: 15%;
+button a {
+    color: #186684;
+    text-decoration: none;
 }
 
+/* Left side of second section of site, image */
 .left-side {
     float: left; 
     width: 50%; 
+    height: 100%; 
 }
 
+/* Right side of section section of site */
 .text-box2 {
     float: right; 
     width: 50%; 
     height: 480px; 
 }
-
-.image-sizing {
-    float: left; 
-    width: 25%; 
+/* centers text within text-box2 */
+.box2-size {
+    width: 75%;
+    margin-left: 15%;
+    margin-top: 15%;
 }
 
+
+/* resizes image in third section and gives enough margin to sit next to text */
+.image-sizing {
+    float: left;
+    width: calc(25% - 20px);
+    margin-top: 64px;
+    margin-left: 60px;
+
+}
+/* positions text in third section of site */
 .box3-size {
     float: left;
-    width: 75%;
-    padding: 100px; 
+    width: calc(75% - 60px);
+    padding: 100px 65px;
 }
 
 .section3-bg {
@@ -205,17 +230,55 @@ button {
 }
 
 .section4-bg {
-    background-image: url(image-5@2x.png);
+    background-image: url(./assets/image-5@2x.png);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
+/* carousel grey box containing icons */
 .icon-box {
-    width: 400px;
-    height: 200px; 
-    background-color: darkgray;
+    width: 45%;
+    height: 250px;
+    background-color: #F4F4F4;
+    position: absolute;
+    left: 27%;
+    top: 27%;
 }
 
+.icon-box ul {
+    margin: 0 auto; 
+}
+
+.icon-box li {
+    list-style-type: none;
+    width: calc(31.3% - 10px);
+    float: left;
+    margin: 10px; 
+}
+
+.icon-box a {
+    display: block; 
+    font-family: 'Nova Flat', cursive;
+    color: #E85B26; 
+    margin-top: 30%;
+    font-size: 45px; 
+    text-align: center;
+
+}
+
+.icon-box a span {
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+    width: 85%;
+    color: #186684;
+    font-family: 'Catamaran', sans-serif;
+
+}
+
+/* positions images in fifth section of site titled "The Gram" */
 .the-gram-1,
 .the-gram-2,
 .the-gram-3 {
@@ -226,21 +289,354 @@ button {
 
 .center-grid {
     text-align: center; 
+    padding: 5%;
+    margin: 5% 0 5% 0; 
 }
 
-.center-grid2 {
-    margin: 0 auto; 
+.center-grid h2 {
+    margin-bottom: 5%; 
 }
 
 
 footer {
     position: relative;
-    height: 50vh;
+    height: 100vh;
+    background-color: #F4F4F4;
+    padding-bottom: 200px; 
 }
 
 footer nav {
+    padding-top: 5%;
+    text-align: center;
+    margin-bottom: 10%; 
+}
+
+footer a {
+    color: black; 
+}
+
+
+
+footer button {
+    background-color: #186684; 
+    border: 2px solid #E85B26;
+    font-size: 15px; 
+    max-width: 30%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav a {
+    color: black; 
+}
+
+form {
+    font-size: 18px; 
+}
+
+footer h2 {
+    color:  #E85B26;
+    margin-bottom: 3%; 
+    font-size: 40px; 
+}
+
+footer p {
+    line-height: 30px;
+    font-size: 18px; 
+}
+
+.form-styles {
+    width: 60%; 
+    padding: 10px;
+    margin-top: 15px; 
+    border: none;
+}
+
+.form-styles::placeholder {
+    font-size: 18px;
+}
+
+/* box4-size used to contain the footer content with "contact info" */
+.box4-size {
+    width: 45%; 
+    float: left; 
+    padding-left: 10%; 
+}
+
+.right-side2 {
+    float: right;
+    width: 50%;
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px;  
+    color: grey; 
+    background-color: black;
+    font-size: 18px;
+}
+
+
+/* ********************************************************************************* */
+/* ********************************************************************************* */
+
+/* MEDIA QUERIES */
+/* first media query */
+@media (max-width: 1122px) {
+
+    h1 {
+        font-size: 80px; 
+    }
+
+    .foot-forward {
+        height: 186px; 
+    }
+
+    .icon-box {
+        height: 350px;
+        top: 13%;
+        width: 25%;
+        left: 40%;
+    }   
+
+    .icon-box li {
+        float: none; 
+        margin-left: 20%; 
+    }
+
+    .icon-box a {
+        font-size: 25px;
+        text-align: center;
+        width: 10%; 
+    }
+
+    .section3-bg {
+        height: 70%; 
+    }
+
+    .image-sizing {
+        float: none; 
+        margin: 0 auto;
+        width: 60%;
+        padding-top: 10%; 
+    }
+
+    .box3-size {
+        float: none; 
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    img {
+        height: 0   auto;
+    }
+
+}
+
+/* second media query */
+@media (max-width: 915px) {
+
+    h1 {
+        font-size: 60px; 
+    }
+
+    .foot-forward {
+        height: 140px; 
+    }
+}
+
+/* third media query */
+@media (max-width:768px) {
+
+    .foot-forward {
+        width: 40%;
+    }
+
+    .right-side,
+    .text-box1,
+    .text-box2,
+    .text-box3,
+    .left-side {
+        width: auto; 
+        height: auto; 
+    }
+
+    section {
+        height: 1000px; 
+    }
+
+    .section4-bg {
+        height: 480px; 
+    }
+    
+    .box3-size {
+        float: none; 
+        width: auto; 
+    }
+
+    .icon-box {
+        width: 35%; 
+        left: 34%; 
+    }
+
+    .center-grid {
+        height: auto;
+        margin-bottom: 20%; 
+    }
+
+    .center-grid h2 {
+        font-size: 50px; 
+        margin: 15% 0; 
+    }
+
+    .the-gram-1 {
+        float:left; 
+        width: 46%;
+    }
+
+    .the-gram-2 {
+        float: right; 
+        width: 46%;
+    }
+
+    .the-gram-3 {
+        display: none;
+    }
+
+    footer nav {
+        left: 30%; 
+    }
+
+    .box4-size {
+        text-align: center; 
+        float: none; 
+        width: auto; 
+        padding: 0; 
+    }
+
+    .right-side2 {
+        text-align: center;
+        float: none; 
+        width: 95%;
+        margin: 0 auto; 
+    }
+
+    .image-sizing {
+        width: 90%; 
+    }
+
+    footer button {
+        display: block;
+        max-width: 100%; 
+        width: 100%;
+        margin-top: 2%;
+        font-size: 25px; 
+    }
+
+    .form-styles {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    form {
+        font-size: 20px; 
+    }
+
+    footer p {
+        font-size:  25px;
+        line-height: 40px;  
+    }
+
+    footer h2 {
+        margin: 5%; 
+    }
+
+    .copyright h4 {
+        padding: 20px; 
+        font-size: 20px;
+    }
+
+    footer a {
+        margin: 3%; 
+    }
+
+    .form-styles::placeholder {
+    font-size: 25px;
+    }
+
+    aside {
+        visibility: hidden;
+    }
+
+    header a {
+        visibility: hidden;
+    }
+
+    .hamburger-menu {
+    visibility: visible;
     position: absolute;
-    bottom: 0; 
-    left: 500px; 
-    max-width: 700px; 
+    right: 0;
+    padding-right: 6%;
+    font-size: 40px;
+    color: #186684;
+    }
+
+
+}
+
+/* fourth media query */
+@media (max-width: 630px) {
+
+    h1 {
+        font-size: 50px;
+    }
+    
+    .foot-forward {
+        width: 45%; 
+        left: 40%; 
+        height: 117px;
+    }
+
+    .right-side {
+        margin-bottom: 5%;
+    }
+}
+
+/* fifth media query */
+@media (max-width: 550px) {
+
+    section {
+        height: 660px;
+    }
+
+    .foot-forward {
+        width: 50%; 
+        left: 30%; 
+    }
+
+    .box1-size,
+    .text-box1,
+    .right-side,
+    .left-side {
+        height: auto; 
+        width: auto; 
+        margin: 0; 
+        text-align: center; 
+    }
+
+    h2 {
+        margin-top: 10px; 
+    }
+
+    .section3-bg {
+        margin-top: 40%; 
+    }
+
+    .icon-box {
+        width: 45%;     
+        left: 30%; 
+    }
 }
